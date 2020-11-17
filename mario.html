@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .mario {
+        width: 68px;
+        height: 68px;
+        display: block;
+        position: relative;
+        background: url('images/mario-walk-n-jump-68.png');
+        /* background-position: 0 top; */
+        animation: walk .4s steps(1) infinite;
+      }
+      .mario2 {
+        width: 68px;
+        height: 68px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: url('images/mario-walk-n-jump-68.png');
+        animation: jump .4s steps(1) 2.4s 1;
+      }
+      @keyframes walk {
+        0% {background-position: 0 top;}
+        25% {background-position: -68px top;}
+        50% {background-position: -136px top;}
+        75% {background-position: -204px top;}
+
+      }
+      .path {
+        width: 68px;
+        height: 68px;
+        display: block;
+        position: absolute;
+        top: 200px;
+        /* left: 0 px; */
+        animation: path 3s linear infinite;
+      }
+      @keyframes jump {
+        0% {background-position: -272px top; opacity: 1;}
+        50% {background-position: -340px top;}
+        100% {opacity: 0;}
+      }
+      @keyframes path {
+        0% {left: -68px;}
+        49% {left: 45%; top: 200px;}
+        50% {left:50%; top:150px;}
+        51% {left:52%; top:200px;}
+        100% {left: 100%;}
+      }
+      .blast {
+        width: 151px;
+        height: 151px;
+        display: block;
+        position: absolute;
+        background: url('images/blast-151.png');
+        left: 50%;
+        animation: blast 1s steps(1) infinite;
+      }
+      @keyframes blast {
+        0% {background-position: 0px 0px;}
+               3% {background-position: -151px 0px;}
+               6% {background-position: -302px 0px;}
+               9% {background-position: -453px 0px;}
+               12% {background-position: -604px 0px;}
+               15% {background-position: -755px 0px;}
+               18% {background-position: -906px 0px;}
+               21% {background-position: -1057px 0px;}
+               24% {background-position: 0px -151px;}
+               27% {background-position: -151px -151px;}
+               30% {background-position: -302px -151px;}
+               33% {background-position: -453px -151px;}
+               36% {background-position: -604px -151px;}
+               39% {background-position: -755px -151px;}
+               42% {background-position: -906px -151px;}
+               45% {background-position: -1057px -151px;}
+               48% {background-position: 0px -302px;}
+               51% {background-position: -151px -302px;}
+               54% {background-position: -302px -302px;}
+               57% {background-position: -453px -302px;}
+               60% {background-position: -604px -302px;}
+               63% {background-position: -755px -302px;}
+               66% {background-position: -906px -302px;}
+               69% {background-position: -1057px -302px;}
+               72% {background-position: 0px -453px;}
+               75% {background-position: -151px -453px;}
+               78% {background-position: -302px -453px;}
+               81% {background-position: -453px -453px;}
+               84% {background-position: -604px -453px;}
+               87% {background-position: -755px -453px;}
+               90% {background-position: -906px -453px;}
+               93% {background-position: -1057px -453px;}
+      }
+      .blast:hover {
+        animation-play-state: paused;
+      }
+      .emoji {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: relative;
+        background: url('images/emoji-120.png');
+      }
+      .emoji-e {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url('images/emoji-120.png');
+        background-position: -640px top;
+        animation: blink 1s steps(1) alternate infinite;
+        animation-play-state: paused;
+        
+      }
+      .emoji-m {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url('images/emoji-120.png');
+        background-position: -160px top;
+        animation: smile 1s steps(1) alternate infinite;
+        animation-play-state: paused;
+      }
+      .emoji:hover .emoji-m, .emoji:hover .emoji-e {
+        animation-play-state: running;
+      }
+      @keyframes blink {
+        0% {background-position: -640px top}
+        33% {background-position: -800px top}
+        66% {background-position: -960px top}
+      }
+      @keyframes smile {
+        0% {background-position: -160px top}
+        33% {background-position: -320px top}
+        66% {background-position: -480px top}
+
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="path">
+      <div class="mario">
+<div class="mario2">
+
+</div>
+      </div>
+    </div>
+<div class="blast">
+
+</div>
+<div class="emoji">
+  <div class="emoji-e">
+  </div>
+  <div class="emoji-m">
+
+  </div>
+</div>
+  </body>
+</html>
