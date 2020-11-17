@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+.marmelad {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: red;
+  top: 100px;
+  left: 100px;
+  animation: bounce 600ms alternate infinite;
+}
+@keyframes bounce {
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+.rubber {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+}
+.rubber:before {
+  content: '';
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  animation: bounce2 500ms alternate infinite ease;
+}
+@keyframes bounce2 {
+  0%{
+    transform:scaleX(2);
+    top: 180px;
+    height: 33px;
+    border-radius: 60px 60px 20px 20px;
+  }
+  35% {
+    height: 100px;
+    border-radius: 50%;
+    transform:scaleX(1);
+  }
+
+}
+.bubble {
+  position: absolute;
+  top: 100px;
+  left: 500px;
+}
+.bubble:before {
+  content: '';
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  border-radius: 100%;
+  animation: bubble 2s infinite ease;
+}
+@keyframes bubble {
+  0% {
+    transform: scale(0,0);
+    top: 200px;
+  }
+  20% {
+    transform: scale(0,0);
+    top: 200px;
+  }
+  30% {
+    transform: scale(0.5, 0.5);
+    top: 200px;
+  }
+  80% {
+    transform: scaleX(1.5,1.5);
+    top: 0px;
+  }
+   90% {
+     transform: scaleX(0.2,0.2);
+     top: 0px;
+   }
+  }
+  100% {
+    transform: scale(0,0);
+    top: 0px;
+  }
+}
+.name {
+  position: absolute;
+  top: 100px;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+.text1 {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+}
+.text2 {
+  position: absolute;
+  top: 10px;
+  left: 300px;
+}
+.text3 {
+  position: absolute;
+  top: 10px;
+  left: 500px;
+}
+</style>
+</head>
+
+<body>
+<div class="marmelad">
+</div>
+<div class="text1">
+  <p>1. Мармеладный</p>
+</div>
+<div class="text2">
+  <p>2. Резиновый</p>
+</div>
+<div class="text3">
+  <p>3. Воздушный</p>
+</div>
+<div class="rubber">
+</div>
+
+<div class="bubble">
+</div>
+
+</body>
+<div class="name">
+
+</div>
+</html>
