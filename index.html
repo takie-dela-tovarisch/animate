@@ -35,12 +35,23 @@
         width: 160px;
   height: 160px;
   display: block;
-  position: absolute;
-  left: 700px;
-  top: 100px;
+  position: relative;
   background: url('images/Frame-2.png');
   background-position: 0px top;
   animation: kiss 2s steps(1) infinite;
+      }
+      .size {
+        width: 160px;
+  height: 160px;
+  position: absolute;
+  display: block;
+  left: 700px;
+  top: 100px;
+  animation: size 1s alternate infinite;
+      }
+      @keyframes size {
+        0%{transform: scale(1);}
+        100%{transform: scale(1.2);}
       }
       @keyframes kiss {
         0%{background-position: -160px top;}
@@ -164,8 +175,12 @@
     </div>
     <div class="crazy">
     </div>
-    <div class="kiss">
+
+    <div class="size">
+      <div class="kiss">
+      </div>
     </div>
+
 
     <div class="path">
       <div class="rotate">
