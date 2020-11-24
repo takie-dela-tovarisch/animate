@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .crazy {
+        width: 160px;
+  height: 160px;
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  background: url('images/frame 1.png');
+  background-position: 0px top;
+  animation: crazy 1.5s steps(1) infinite;
+  animation-play-state: paused;
+      }
+      @keyframes crazy {
+        0%{background-position: -160px top;}
+        10%{background-position: -320px top;}
+        20%{background-position: -320px top;}
+        30%{background-position: -480px top;}
+        40%{background-position: -640px top;}
+        50%{background-position: -800px top;}
+        60%{background-position: -640px top;}
+        70%{background-position: -800px top;}
+        80%{background-position: -480px top;}
+        90%{background-position: -480px top;}
+      }
+      .crazy:hover {
+        animation-play-state: running;
+      }
+      .kiss {
+        width: 160px;
+  height: 160px;
+  display: block;
+  position: absolute;
+  left: 700px;
+  top: 100px;
+  background: url('images/frame 2.png');
+  background-position: 0px top;
+  animation: kiss 2s steps(1) infinite;
+      }
+      @keyframes kiss {
+        0%{background-position: -160px top;}
+        10%{background-position: -320px top;}
+        20%{background-position: -480px top;}
+        30%{background-position: -640px top;}
+        40%{background-position: -800px top;}
+        50%{background-position: -960px top;}
+        60%{background-position: -1120px top;}
+        70%{background-position: -1280px top;}
+        80%{background-position: -1280px top;}
+        90%{background-position: -1440px top;}
+        100%{background-position: -1600px top;}
+      }
+      .kolobok {
+        width: 160px;
+  height: 160px;
+  display: block;
+  position: relative;
+  background: url('images/frame 4.png');
+  background-position: 0px top;
+  animation: kolobok 1.5s steps(1) infinite;
+      }
+      @keyframes kolobok {
+        0%{background-position: -160px top;}
+        20%{background-position: -320px top;}
+        40%{background-position: -480px top;}
+        60%{background-position: -640px top;}
+        80%{background-position: -800px top;}
+      }
+      .rotate {
+        width: 160px;
+  height: 160px;
+        display: block;
+        position: relative;
+        animation: rotate 0.5s linear infinite;
+      }
+      @keyframes rotate {
+        0% {transform:rotate(0deg);}
+        100% {transform:rotate(180deg);}
+      }
+      .path {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        top: 315px;
+        animation: path 2s linear infinite;
+      }
+      @keyframes path {
+        0% {left: -160px;}
+        100% {left:100%;}
+      }
+      .sad {
+        width: 160px;
+  height: 160px;
+  display: block;
+  position: absolute;
+  left: 700px;
+  top: 500px;
+  background: url('images/frame 5.png');
+  background-position: 0px top;
+  animation: sad 1.5s steps(1) infinite;
+      }
+      @keyframes sad {
+        0%{background-position: -160px top;}
+        20%{background-position: -320px top;}
+        40%{background-position: -480px top;}
+        60%{background-position: -640px top;}
+        80%{background-position: -800px top;}
+        90%{background-position: -960px top;}
+      }
+      .last {
+        width: 160px;
+  height: 160px;
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 500px;
+  background: url('images/frame 6.png');
+  background-position: 0px top;
+  animation: last 2s steps(1) infinite;
+  animation-play-state: running;
+      }
+      @keyframes last {
+        0%{background-position: -160px top;}
+        10%{background-position: -320px top;}
+        30%{background-position: -480px top;}
+        50%{background-position: -640px top;}
+        70%{background-position: -800px top;}
+        80%{background-position: -960px top;}
+        100%{background-position: -960px top;}
+      }
+      .last:hover {
+        animation-play-state: paused;
+      }
+      .menubar {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        background-color: blue;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menubar">
+      <a href="animate.html">Круги 1</a>
+      <a href="what.html">Круги 2</a>
+      <a href="index.html">Эмодзи</a>
+      <a href="mario.html">Марио</a>
+    </div>
+    <div class="crazy">
+    </div>
+    <div class="kiss">
+    </div>
+
+    <div class="path">
+      <div class="rotate">
+        <div class="kolobok">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sad">
+    </div>
+    <div class="last">
+    </div>
+  </body>
+</html>
